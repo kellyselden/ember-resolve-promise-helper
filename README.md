@@ -1,6 +1,7 @@
 # ember-resolve-promise-helper
 
 [![Build Status](https://travis-ci.org/kellyselden/ember-resolve-promise-helper.svg)](https://travis-ci.org/kellyselden/ember-resolve-promise-helper)
+[![npm version](https://badge.fury.io/js/ember-resolve-promise-helper.svg)](https://badge.fury.io/js/ember-resolve-promise-helper)
 
 Resolve a promise when it is a trailing property
 
