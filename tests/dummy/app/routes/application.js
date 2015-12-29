@@ -8,9 +8,10 @@ const {
 export default Route.extend({
   model() {
     return {
-      promise: new Promise(resolve => {
-        resolve(42);
-      })
+      promise: Promise.resolve(42),
+      child: Promise.resolve(Ember.Object.create({
+        name: 'Kelly Selden'
+      }))
     };
   }
 });

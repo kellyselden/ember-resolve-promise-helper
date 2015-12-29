@@ -1,7 +1,15 @@
-<span id="unresolved-promise">
+<div id="unresolved-promise">
   {{model.promise}}
-</span>
+</div>
 
-<span id="resolved-promise">
+<div id="resolved-promise">
   {{resolve-promise model.promise}}
-</span>
+</div>
+
+<div id="unresolved-promise-to-component">
+  {{my-component child=model.child}}
+</div>
+
+<div id="resolved-promise-to-component">
+  {{my-component child=(resolve-promise model.child)}}
+</div>

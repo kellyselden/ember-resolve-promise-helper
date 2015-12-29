@@ -1,6 +1,42 @@
-# Ember-resolve-promise-helper
+# ember-resolve-promise-helper
 
-This README outlines the details of collaborating on this Ember addon.
+Resolve a promise when it is a trailing property
+
+```js
+// models/parent.js
+export default DS.Model.extend({
+  child: DS.belongsTo('child');
+});
+```
+
+```js
+// models/child.js
+export default DS.Model.extend({
+  name: DS.attr();
+});
+```
+
+```js
+// routes/application.js
+export default Ember.Route.extend({
+  model() {
+    return this.store.findRecord('parent', 1);
+  }
+});
+```
+
+```hbs
+// templates/application.hbs
+{{my-component child=model.child}}
+```
+
+```js
+// components/my-component.js
+export default Ember.Component.extend({
+  // This would not work otherwise
+  name: Ember.computed.reads('child.name')
+});
+```
 
 ## Installation
 
