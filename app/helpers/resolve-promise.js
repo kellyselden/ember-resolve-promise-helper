@@ -1,1 +1,1 @@
-export { default, resolvePromise } from 'ember-resolve-promise-helper/helpers/resolve-promise';
+export { default } from 'ember-resolve-promise-helper/helpers/resolve-promise';

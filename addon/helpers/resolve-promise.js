@@ -1,7 +1,24 @@
 import Ember from 'ember';
 
-export function resolvePromise(params/*, hash*/) {
-  return params;
-}
+const {
+  Helper,
+  get,
+  set
+} = Ember;
 
-export default Ember.Helper.helper(resolvePromise);
+export default Helper.extend({
+  isResolved: false,
+  value: null,
+
+  compute([promise]) {
+    if (!get(this, 'isResolved')) {
+      promise.then(value => {
+        this.toggleProperty('isResolved');
+        set(this, 'value', value);
+        this.recompute();
+      });
+    }
+
+    return get(this, 'value');
+  }
+});
