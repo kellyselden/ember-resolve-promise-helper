@@ -1,7 +1,7 @@
 {
   "name": "ember-resolve-promise-helper",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Resolve a promise when it is a trailing property",
   "directories": {
     "doc": "doc",
     "test": "tests"
