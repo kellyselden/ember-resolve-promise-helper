@@ -1,6 +1,6 @@
 {
   "name": "ember-resolve-promise-helper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Resolve a promise when it is a trailing property",
   "directories": {
     "doc": "doc",
