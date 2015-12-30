@@ -29,7 +29,7 @@ export default Ember.Route.extend({
 ```
 
 ```hbs
-// templates/application.hbs
+{{!-- templates/application.hbs --}}
 {{my-component child=model.child}}
 ```
 
